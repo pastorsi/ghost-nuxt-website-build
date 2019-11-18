@@ -1,13 +1,17 @@
 <template>
   <div>
-    <div>My blog navigation bar here</div>
+    <navbar></navbar>
     <nuxt />
   </div>
 </template>
 
 <script>
+import Navbar from '../components/navbar'
+
 export default {
-  components: {}
+  components: {
+    Navbar
+  }
 }
 </script>
 
