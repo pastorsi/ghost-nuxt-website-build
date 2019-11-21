@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-light" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
         <img
@@ -11,6 +11,8 @@
       </a>
 
       <a
+        @click="isOpen = !isOpen"
+        v-bind:class="{ 'is-active': isOpen }"
         role="button"
         class="navbar-burger"
         aria-label="menu"
@@ -21,15 +23,31 @@
         <span aria-hidden="true"></span>
       </a>
     </div>
-    <div class="navbar-menu">
+    <div v-bind:class="{ 'is-active': isOpen }" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item">
+        <a class="navbar-item is-tab">
           <nuxt-link to="/">Home</nuxt-link>
         </a>
-        <a class="navbar-item">
+        <a class="navbar-item is-tab">
           <nuxt-link to="/affiliated-churches">Affiliates</nuxt-link>
         </a>
       </div>
     </div>
   </nav>
 </template>
+
+<script>
+export default {
+  _data() {
+    return {
+      isOpen: false
+    }
+  },
+  get data() {
+    return this._data
+  },
+  set data(value) {
+    this._data = value
+  }
+}
+</script>
