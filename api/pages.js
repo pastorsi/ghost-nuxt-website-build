@@ -6,11 +6,11 @@ const api = new GhostContentAPI({
   version: 'v3'
 })
 
-export async function getPosts() {
+export async function getPages() {
   // eslint-disable-next-line no-return-await
-  return await api.posts
+  return await api.pages
     .browse({
-      include: 'tags,authors',
+      include: 'tags.authors',
       limit: 'all'
     })
     .catch((err) => {
@@ -18,22 +18,11 @@ export async function getPosts() {
       console.error(err)
     })
 }
-export async function getSinglePost(postSlug) {
+export async function getAuthor(authorSlug) {
   // eslint-disable-next-line no-return-await
-  return await api.posts
+  return await api.authors
     .read({
-      slug: postSlug
-    })
-    .catch((err) => {
-      // eslint-disable-next-line no-console
-      console.error(err)
-    })
-}
-export async function getPage(pageSlug) {
-  // eslint-disable-next-line no-return-await
-  return await api.pages
-    .read({
-      slug: pageSlug
+      slug: authorSlug
     })
     .catch((err) => {
       // eslint-disable-next-line no-console
