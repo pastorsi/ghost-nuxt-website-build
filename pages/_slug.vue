@@ -15,6 +15,18 @@ export default {
     // eslint-disable-next-line no-return-await
     const post = await getSinglePost(params.slug)
     return { post }
+  },
+  head() {
+    return {
+      title: this.post.meta_title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.post.meta_description
+        }
+      ]
+    }
   }
 }
 </script>
