@@ -1,18 +1,46 @@
 <template>
-  <div>
-    <navbar></navbar>
-    <nuxt />
+  <div class="app-container">
+    <TheHeader />
+    <TheSideNav />
+    <div class="app-content">
+      <nuxt />
+    </div>
+    <TheFooter />
   </div>
 </template>
 
 <script>
-import Navbar from '../components/navbar'
+import TheHeader from '~/components/TheHeader'
+import TheFooter from '~/components/TheFooter'
+import TheSideNav from '~/components/TheSideNav'
 
 export default {
   components: {
-    Navbar
+    TheHeader,
+    TheSideNav,
+    TheFooter
   }
 }
 </script>
 
-<style></style>
+<style>
+html,
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+.app-container {
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-template: auto 1fr auto / 1fr;
+}
+.app-content {
+  min-height: 100vh;
+  padding: 24px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+</style>

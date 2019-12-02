@@ -1,53 +1,45 @@
 <template>
-  <nav class="navbar is-success" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
-        <img
-          src="https://bulma.io/images/bulma-logo.png"
-          alt="Bulma: Free, CSS framework"
-          width="112"
-          height="28"
-        />
-      </a>
-
-      <a
-        @click="isOpen = !isOpen"
-        v-bind:class="{ 'is-active': isOpen }"
-        role="button"
-        class="navbar-burger"
-        aria-label="menu"
-        aria-expanded="false"
-      >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-    <div v-bind:class="{ 'is-active': isOpen }" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item is-tab">
-          <nuxt-link to="/">Home</nuxt-link>
-        </a>
-        <a class="navbar-item is-tab">
-          <nuxt-link to="/affiliated-churches">Affiliates</nuxt-link>
-        </a>
+  <div id="my-app">
+    <nav
+      class="navbar is-primary"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <img src="http://bulma.io/images/bulma-logo.png" alt="Logo" />
+          </a>
+          <span
+            role="button"
+            class="navbar-burger burger"
+            aria-label="menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navMenu" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item">
+              <nuxt-link to="/">Home</nuxt-link>
+            </a>
+            <a class="navbar-item">
+              <nuxt-link to="/affiliated-churches">Affiliates</nuxt-link>
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </template>
 
-<script>
-export default {
-  _data() {
-    return {
-      isOpen: false
-    }
-  },
-  get data() {
-    return this._data
-  },
-  set data(value) {
-    this._data = value
-  }
+<script></script>
+
+<style scoped>
+.navbar-item {
+  color: #4a4a4a !important;
 }
-</script>
+</style>
