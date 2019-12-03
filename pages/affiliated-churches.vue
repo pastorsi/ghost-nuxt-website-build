@@ -7,23 +7,37 @@
           Affiliated Churches and Ministries
         </h1>
         <div class="container">
-          <div v-for="(post, index) in posts" :key="index" class="card">
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-4">{{ post.title }}</p>
-                  <p class="subtitle is-6">
-                    Author: {{ post.authors[0].name }}
-                  </p>
+          <div class="columns is-multiline">
+            <div
+              v-for="(post, index) in posts"
+              :key="index"
+              class="column is-one-thirds"
+            >
+              <nuxt-link :to="{ path: post.slug }">
+                <div class="card">
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-left">
+                        <figure class="image is-96x96">
+                          <img :src="post.feature_image" :alt="post.title" />
+                        </figure>
+                      </div>
+                      <div class="media-content">
+                        <p class="title is-4">{{ post.title }}</p>
+                        <p class="subtitle is-6">
+                          Author: {{ post.authors[0].name }}
+                        </p>
+                      </div>
+                    </div>
+                    <div class="content">
+                      {{ post.excerpt }}
+                      <br />
+                      <time>Date posted: {{ post.updated_at }}</time>
+                      <br />
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="content">
-                {{ post.excerpt }}
-                <br />
-                <time>Date posted: {{ post.updated_at }}</time>
-                <br />
-                <nuxt-link :to="{ path: post.slug }">View this post!</nuxt-link>
-              </div>
+              </nuxt-link>
             </div>
           </div>
         </div>
