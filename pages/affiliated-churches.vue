@@ -4,7 +4,7 @@
       <div class="column"></div>
       <div class="column is-two-thirds">
         <h1 class="title has-text-info">
-          Affiliated Churches and Ministries
+          Churches and Ministries
         </h1>
         <div class="container">
           <div class="columns is-multiline">
@@ -48,12 +48,24 @@
 </template>
 
 <script>
-import { getPosts } from '../api/posts'
+import { getPosts } from '~/api/posts'
 
 export default {
   async asyncData() {
     const posts = await getPosts()
     return { posts }
+  },
+  head() {
+    return {
+      title: 'Affiliated churches',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'A list of MCEA churches and ministries'
+        }
+      ]
+    }
   }
 }
 </script>

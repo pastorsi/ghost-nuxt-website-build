@@ -4,6 +4,9 @@
     <li class="nav-item">
       <nuxt-link to="/affiliated-churches">Affiliates</nuxt-link>
     </li>
+    <li class="nav-item">
+      <nuxt-link to="/authors">Contributors</nuxt-link>
+    </li>
   </ul>
 </template>
 

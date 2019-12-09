@@ -1,10 +1,18 @@
 <template>
-  <div>
-    <h1 class="title is-2 is-spaced has-text-info has-text-centered">
-      {{ post.title }}
-    </h1>
-    <div v-html="post.html" />
-  </div>
+  <section class="section">
+    <div class="content">
+      <div class="columns">
+        <div class="column"></div>
+        <div class="column is-two-thirds">
+          <h1 class="title is-2 is-spaced has-text-info has-text-centered">
+            {{ post.title }}
+          </h1>
+          <div v-html="post.html" />
+        </div>
+        <div class="column"></div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
