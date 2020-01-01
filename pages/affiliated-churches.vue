@@ -48,11 +48,11 @@
 </template>
 
 <script>
-import { getPosts } from '~/api/posts'
+import { getPosts } from '@/api/posts'
 
 export default {
   async asyncData() {
-    const posts = await getPosts()
+    const posts = await getPosts('writing')
     return { posts }
   },
   head() {

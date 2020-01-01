@@ -6,12 +6,13 @@ const api = new GhostContentAPI({
   version: 'v3'
 })
 
-export async function getPosts() {
+export async function getPosts(tagName) {
   // eslint-disable-next-line no-return-await
   return await api.posts
     .browse({
       include: 'tags,authors',
-      limit: 'all'
+      limit: 15,
+      filter: 'tag:' + tagName
     })
     .catch((err) => {
       // eslint-disable-next-line no-console
