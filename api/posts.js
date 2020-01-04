@@ -1,9 +1,9 @@
 import GhostContentAPI from '@tryghost/content-api'
 
 const api = new GhostContentAPI({
+  version: 'v3',
   url: 'http://localhost:2368',
-  key: '986fbe8bc3d3709620622038ad',
-  version: 'v3'
+  key: process.env.VUE_APP_GHOST_KEY
 })
 
 export async function getPosts(tagName) {
