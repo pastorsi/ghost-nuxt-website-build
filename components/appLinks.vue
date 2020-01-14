@@ -2,10 +2,10 @@
   <ul class="nav-list">
     <li class="nav-item"><nuxt-link to="/">Home</nuxt-link></li>
     <li class="nav-item">
-      <nuxt-link to="/affiliated-churches">Affiliates</nuxt-link>
+      <nuxt-link to="/churches">Churches</nuxt-link>
     </li>
     <li class="nav-item">
-      <nuxt-link to="/authors">Contributors</nuxt-link>
+      <nuxt-link to="/ministries">Ministries</nuxt-link>
     </li>
   </ul>
 </template>

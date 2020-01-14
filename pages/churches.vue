@@ -4,7 +4,7 @@
       <div class="column"></div>
       <div class="column is-two-thirds">
         <h1 class="title has-text-info">
-          Churches and Ministries
+          Affiliated Churches
         </h1>
         <div class="container">
           <div class="columns is-multiline">
@@ -18,21 +18,15 @@
                   <div class="card-content">
                     <div class="media">
                       <div class="media-left">
-                        <figure class="image is-96x96">
-                          <img :src="post.feature_image" :alt="post.title" />
+                        <figure class="image is-128x128">
+                          <img :src="post.feature_image" class="is-rounded" />
                         </figure>
-                      </div>
-                      <div class="media-content">
-                        <p class="title is-4">{{ post.title }}</p>
-                        <p class="subtitle is-6">
-                          Author: {{ post.authors[0].name }}
-                        </p>
                       </div>
                     </div>
                     <div class="content">
-                      {{ post.excerpt }}
-                      <br />
-                      <time>Date posted: {{ post.updated_at }}</time>
+                      <p class="title is-4">{{ post.title }}</p>
+                      <p class="is-medium">{{ post.excerpt }}</p>
+                      <button class="button is-info">More info</button>
                       <br />
                     </div>
                   </div>
@@ -52,7 +46,8 @@ import { getPosts } from '@/api/posts'
 
 export default {
   async asyncData() {
-    const posts = await getPosts('writing')
+    const tag = 'church'
+    const posts = await getPosts(tag)
     return { posts }
   },
   head() {
@@ -62,7 +57,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'A list of MCEA churches and ministries'
+          content: 'A list of MCEA churches'
         }
       ]
     }
