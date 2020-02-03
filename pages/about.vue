@@ -18,7 +18,7 @@ import { getPage } from '~/api/posts'
 
 export default {
   async asyncData() {
-    const page = await getPage('introducing-mcea')
+    const page = await getPage('about-us')
     return { page }
   },
   head() {
