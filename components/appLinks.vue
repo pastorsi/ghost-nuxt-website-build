@@ -21,6 +21,11 @@
   margin: 0 10px;
 }
 
+.sidenav .nav-item {
+  border-top: 1pt solid #ffffff;
+  padding-top: 3px;
+}
+
 .nav-item a {
   text-decoration: none;
   color: #fefefe;

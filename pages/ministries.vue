@@ -4,8 +4,12 @@
       <div class="column"></div>
       <div class="column is-two-thirds">
         <h1 class="title has-text-info">
-          Affiliated Ministries
+          Participating Ministries
         </h1>
+        <p class="subtitle is-5">
+          The ministries in the list below all send representatives to our
+          gatherings.
+        </p>
         <div class="container">
           <div class="columns is-multiline">
             <div

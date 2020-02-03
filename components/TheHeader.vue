@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="brand-name">
-      <nuxt-link to="/">HAPPY VUE YEAR</nuxt-link>
+      <nuxt-link to="/">Gather Mid Cotswold</nuxt-link>
     </div>
     <div
       @click="$store.dispatch('nav/toggleSidebar')"
@@ -31,7 +31,7 @@ header {
   display: grid;
   grid-template: 60px / auto 1fr;
   align-items: center;
-  background-color: rgb(18, 107, 25);
+  background-color: rgb(0, 151, 167);
 }
 .app-links {
   justify-self: end;

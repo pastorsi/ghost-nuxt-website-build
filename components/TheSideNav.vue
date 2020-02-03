@@ -33,8 +33,9 @@ export default {
 }
 .sidenav {
   height: 100%;
-  width: 300px;
-  background-color: #d6d6d6;
+  width: 200px;
+  background-color: rgb(0, 151, 167);
+  opacity: 0.6;
   z-index: 10000;
   position: fixed;
   top: 0;
