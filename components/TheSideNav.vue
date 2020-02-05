@@ -27,6 +27,7 @@ export default {
 </script>
 
 <style scoped>
+@import '~/assets/scss/main.scss';
 .sidenav-container {
   height: 100%;
   width: 100%;

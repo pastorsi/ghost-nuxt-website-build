@@ -56,7 +56,7 @@ export default {
   },
   head() {
     return {
-      title: 'Affiliated churches',
+      title: 'Churches',
       meta: [
         {
           hid: 'description',
@@ -69,4 +69,6 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+@import '~/assets/scss/main.scss';
+</style>

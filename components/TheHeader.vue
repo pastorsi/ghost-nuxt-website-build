@@ -27,6 +27,7 @@ export default {
 </script>
 
 <style scoped>
+@import '~/assets/scss/main.scss';
 header {
   display: grid;
   grid-template: 60px / auto 1fr;
