@@ -5,6 +5,9 @@
       <nuxt-link to="/about">About Us</nuxt-link>
     </li>
     <li class="nav-item">
+      <nuxt-link to="/gatherings">Gatherings</nuxt-link>
+    </li>
+    <li class="nav-item">
       <nuxt-link to="/churches">Churches</nuxt-link>
     </li>
     <li class="nav-item">
