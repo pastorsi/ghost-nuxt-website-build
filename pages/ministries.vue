@@ -28,16 +28,14 @@
                       </div>
                       <div class="media-content">
                         <p class="title is-4">{{ post.title }}</p>
-                        <p class="subtitle is-6">
+                        <!--<p class="subtitle is-6">
                           Author: {{ post.authors[0].name }}
-                        </p>
+                        </p>-->
                       </div>
                     </div>
                     <div class="content">
-                      {{ post.excerpt }}
-                      <br />
-                      <time>Date posted: {{ post.updated_at }}</time>
-                      <br />
+                      <p class="is-medium">{{ post.excerpt }}</p>
+                      <button class="button is-info">Read more</button>
                     </div>
                   </div>
                 </div>

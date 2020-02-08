@@ -4,11 +4,11 @@
       <div class="column"></div>
       <div class="column is-two-thirds">
         <h1 class="title has-text-info">
-          Participating Churches
+          Local events
         </h1>
         <p class="subtitle is-5">
-          The churches in the list below all send representatives to our
-          gatherings.
+          The events in the list below are organised by churches or ministries
+          who send representatives to our gatherings.
         </p>
         <div class="container">
           <div class="columns is-multiline">
@@ -54,18 +54,18 @@ import { getPosts } from '@/api/posts'
 
 export default {
   async asyncData() {
-    const tag = 'church'
+    const tag = 'event'
     const posts = await getPosts(tag)
     return { posts }
   },
   head() {
     return {
-      title: 'Churches',
+      title: 'Local events',
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'A list of MCEA churches'
+          content: 'Events list'
         }
       ]
     }

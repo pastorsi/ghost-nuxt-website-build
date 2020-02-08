@@ -10,6 +10,9 @@
     <li class="nav-item">
       <nuxt-link to="/ministries">Ministries</nuxt-link>
     </li>
+    <li class="nav-item">
+      <nuxt-link to="/events">Events</nuxt-link>
+    </li>
   </ul>
 </template>
 
