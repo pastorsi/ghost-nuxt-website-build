@@ -16,6 +16,9 @@
     <li class="nav-item">
       <nuxt-link to="/events">Events</nuxt-link>
     </li>
+    <li class="nav-item">
+      <nuxt-link to="/news">News</nuxt-link>
+    </li>
   </ul>
 </template>
 
