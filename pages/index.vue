@@ -6,6 +6,14 @@
           <h1 class="title has-text-warning">{{ page.title }}</h1>
         </div>
       </div>
+      <div class="hero-foot has-text-centered">
+        <span class="icon is-large has-text-warning box">
+          <font-awesome-icon
+            :icon="['fas', 'angle-double-down']"
+            style="font-size: 3em"
+          />
+        </span>
+      </div>
     </section>
     <section class="section">
       <div class="content">
@@ -52,6 +60,9 @@ export default {
   background-repeat: no-repeat;
   background-position: 50% 0%;
   background-size: cover;
+}
+.hero-foot {
+  padding-bottom: 5em;
 }
 .subtitle {
   background-color: rgba(37, 54, 39, 0.3);
