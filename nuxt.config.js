@@ -1,10 +1,7 @@
 require('dotenv').config()
 
 export default {
-  mode: 'spa',
-  router: {
-    base: 'ghost-nuxt-website-build'
-  },
+  mode: 'universal',
   /*
    ** Headers of the page
    */
