@@ -27,7 +27,7 @@
                         </figure>
                       </div>
                       <div class="media-content">
-                        <p class="title is-4">{{ post.title }}</p>
+                        <p class="title is-5">{{ post.title }}</p>
                         <!--<p class="subtitle is-6">
                           Author: {{ post.authors[0].name }}
                         </p>-->
@@ -53,6 +53,7 @@
 import { getPosts } from '@/api/posts'
 
 export default {
+  layout: 'HeroPage',
   async asyncData() {
     const tag = 'gathering'
     const posts = await getPosts(tag)
