@@ -1,8 +1,10 @@
 require('dotenv').config()
 
-// eslint-disable-next-line nuxt/no-cjs-in-config
-module.exports = {
-  mode: 'universal',
+export default {
+  mode: 'spa',
+  router: {
+    base: 'ghost-nuxt-website-build'
+  },
   /*
    ** Headers of the page
    */
