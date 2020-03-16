@@ -7,8 +7,7 @@
           Our Gatherings
         </h1>
         <p class="subtitle is-5">
-          This is a list of our gatherings for participating church ministers
-          and ministry leaders the current year.
+          This is a list of our upcoming gatherings in the current year.
         </p>
         <div class="container">
           <div class="columns is-multiline">
