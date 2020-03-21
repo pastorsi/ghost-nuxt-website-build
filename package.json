@@ -10,7 +10,18 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "test": "jest"
+    "test": "jest",
+    "precommit": "npm run lint",
+    "build:firebase": "npm clean && npm build && npm copy && cd \"functions\" && npm",
+    "clean:public": "rimraf \"public/**/*.*!(md)\" && rimraf \"public/_nuxt\"",
+    "clean:functions": "rimraf \"functions/node_modules\" && rimraf \"functions/.nuxt\"",
+    "clean:static": "rimraf \"src/static/sw.js\"",
+    "clean": "npm clean:public && npm clean:functions && npm clean:static",
+    "copy": "npm copy:nuxt && npm copy:static",
+    "copy:nuxt": "cp -r functions/.nuxt/dist/* public/_nuxt",
+    "copy:static": "cp -r src/static/* public",
+    "start:firebase": "firebase serve --only functions,hosting",
+    "deploy": "firebase deploy --only functions,hosting"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
@@ -19,7 +30,6 @@
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "@nuxtjs/bulma": "^1.2.1",
     "@nuxtjs/dotenv": "^1.4.1",
-    "@nuxtjs/pwa": "^3.0.0",
     "@tryghost/content-api": "^1.3.4",
     "bulma": "^0.8.0",
     "dotenv": "^8.2.0",
