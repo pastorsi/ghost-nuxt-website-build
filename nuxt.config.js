@@ -2,6 +2,8 @@ require('dotenv').config()
 
 export default {
   mode: 'universal',
+  srcDir: 'src',
+  buildDir: 'functions/.nuxt',
   /*
    ** Headers of the page
    */
@@ -65,6 +67,7 @@ export default {
    ** Build configuration
    */
   build: {
+    extractCSS: true,
     postcss: {
       preset: {
         features: {
