@@ -1,23 +1,72 @@
 <template>
   <ul class="nav-list">
-    <li class="nav-item"><nuxt-link to="/">Home</nuxt-link></li>
     <li class="nav-item">
-      <nuxt-link to="/about">About Us</nuxt-link>
+      <nuxt-link to="/">
+        <span class="icon is-small has-text-warning">
+          <font-awesome-icon :icon="['fas', 'home']" style="font-size: 1em" />
+        </span>
+        Home
+      </nuxt-link>
     </li>
     <li class="nav-item">
-      <nuxt-link to="/gatherings">Gatherings</nuxt-link>
+      <nuxt-link to="/about">
+        <span class="icon is-small has-text-warning">
+          <font-awesome-icon
+            :icon="['far', 'address-card']"
+            style="font-size: 1em"
+          />
+        </span>
+        About Us
+      </nuxt-link>
     </li>
     <li class="nav-item">
-      <nuxt-link to="/churches">Churches</nuxt-link>
+      <nuxt-link to="/gatherings">
+        <span class="icon is-small has-text-warning">
+          <font-awesome-icon :icon="['fab', 'meetup']" style="font-size: 1em" />
+        </span>
+        Gatherings
+      </nuxt-link>
     </li>
     <li class="nav-item">
-      <nuxt-link to="/ministries">Ministries</nuxt-link>
+      <nuxt-link to="/churches">
+        <span class="icon is-small has-text-warning">
+          <font-awesome-icon :icon="['fas', 'church']" style="font-size: 1em" />
+        </span>
+        Churches
+      </nuxt-link>
     </li>
     <li class="nav-item">
-      <nuxt-link to="/events">Events</nuxt-link>
+      <nuxt-link to="/ministries">
+        <span class="icon is-small has-text-warning">
+          <font-awesome-icon
+            :icon="['fas', 'hands-helping']"
+            style="font-size: 1em"
+          />
+        </span>
+        Ministries
+      </nuxt-link>
     </li>
     <li class="nav-item">
-      <nuxt-link to="/news">News</nuxt-link>
+      <nuxt-link to="/events">
+        <span class="icon is-small has-text-warning">
+          <font-awesome-icon
+            :icon="['far', 'calendar-alt']"
+            style="font-size: 1em"
+          />
+        </span>
+        Events
+      </nuxt-link>
+    </li>
+    <li class="nav-item">
+      <nuxt-link to="/news">
+        <span class="icon is-small has-text-warning">
+          <font-awesome-icon
+            :icon="['far', 'newspaper']"
+            style="font-size: 1em"
+          />
+        </span>
+        News
+      </nuxt-link>
     </li>
   </ul>
 </template>
