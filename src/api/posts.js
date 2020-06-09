@@ -2,7 +2,7 @@ import GhostContentAPI from '@tryghost/content-api'
 
 const api = new GhostContentAPI({
   version: 'v3',
-  url: 'https://mcea.herokuapp.com',
+  url: 'https://www.easy-publish.online',
   key: process.env.VUE_APP_GHOST_KEY
 })
 
