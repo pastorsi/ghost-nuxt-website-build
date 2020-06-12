@@ -36,8 +36,6 @@
     "nuxt-fontawesome": "^0.4.0"
   },
   "devDependencies": {
-    "eslint-plugin-promise": "^4.0.1",
-    "firebase-functions-test": "^0.1.6",
     "@nuxtjs/eslint-config": "^1.0.1",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@vue/test-utils": "^1.0.0-beta.27",
@@ -47,11 +45,13 @@
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "firebase-functions-test": "^0.1.6",
     "jest": "^24.1.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "prettier": "^1.16.4",
     "sass-loader": "^8.0.2",
-    "vue-jest": "^4.0.0-0"
+    "vue-jest": "^4.0.0-beta.3"
   },
   "private": true
 }
