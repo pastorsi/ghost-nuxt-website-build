@@ -33,7 +33,7 @@
                       </div>
                     </div>
                     <div class="content">
-                      <p class="is-medium">{{ post.excerpt }}</p>
+                      <p class="is-medium">{{ post.custom_excerpt }}</p>
                       <button class="button is-info">Read more</button>
                     </div>
                   </div>
