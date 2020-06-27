@@ -2,7 +2,7 @@
   <ul class="nav-list">
     <li class="nav-item">
       <nuxt-link to="/">
-        <span class="icon is-small has-text-warning">
+        <span class="icon is-small has-text-warning menuhovereffect">
           <font-awesome-icon :icon="['fas', 'home']" style="font-size: 1em" />
         </span>
         Home
@@ -94,7 +94,21 @@
 
 .nav-item a:hover,
 .nav-item a:active {
-  color: #b4b4b4;
+  color: #08147c;
+  -webkit-transition: color 750ms;
+  -moz-transition: color 750ms;
+  -ms-transition: color 750ms;
+  -o-transition: color 750ms;
+  transition: color 750ms;
+}
+
+.has-text-warning:hover {
+  color: #08147c !important;
+  -webkit-transition: color 750ms;
+  -moz-transition: color 750ms;
+  -ms-transition: color 750ms;
+  -o-transition: color 750ms;
+  transition: color 750ms;
 }
 
 @media (max-width: 767px) {
