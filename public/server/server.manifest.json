@@ -1,0 +1,29 @@
+{
+  "entry": "server.js",
+  "files": {
+    "pages/_slug.js": "pages/_slug.js",
+    "pages/about/index.js": "pages/about/index.js",
+    "pages/authors/index.js": "pages/authors/index.js",
+    "pages/churches/index.js": "pages/churches/index.js",
+    "pages/events/index.js": "pages/events/index.js",
+    "pages/faith/index.js": "pages/faith/index.js",
+    "pages/gatherings/index.js": "pages/gatherings/index.js",
+    "pages/index.js": "pages/index.js",
+    "pages/ministries/index.js": "pages/ministries/index.js",
+    "pages/news/index.js": "pages/news/index.js",
+    "server.js": "server.js"
+  },
+  "maps": {
+    "pages/_slug.js": "pages/_slug.js.map",
+    "pages/about/index.js": "pages/about/index.js.map",
+    "pages/authors/index.js": "pages/authors/index.js.map",
+    "pages/churches/index.js": "pages/churches/index.js.map",
+    "pages/events/index.js": "pages/events/index.js.map",
+    "pages/faith/index.js": "pages/faith/index.js.map",
+    "pages/gatherings/index.js": "pages/gatherings/index.js.map",
+    "pages/index.js": "pages/index.js.map",
+    "pages/ministries/index.js": "pages/ministries/index.js.map",
+    "pages/news/index.js": "pages/news/index.js.map",
+    "server.js": "server.js.map"
+  }
+}
