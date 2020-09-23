@@ -45,6 +45,8 @@ export default {
     '@nuxtjs/bulma',
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
+    'nuxt-rfg-icon',
+    '@nuxtjs/manifest',
     [
       'nuxt-fontawesome',
       {

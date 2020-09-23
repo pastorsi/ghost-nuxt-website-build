@@ -26,7 +26,8 @@
     "bulma": "^0.8.0",
     "dotenv": "^8.2.0",
     "nuxt": "^2.14.5",
-    "nuxt-fontawesome": "^0.4.0"
+    "nuxt-fontawesome": "^0.4.0",
+    "nuxt-rfg-icon": "^0.6.4"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",

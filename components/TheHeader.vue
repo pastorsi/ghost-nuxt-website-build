@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="brand-name">
-      <nuxt-link to="/">Gather Severnside</nuxt-link>
+      <nuxt-link to="/">Mid Cotswolds Evangelical Alliance</nuxt-link>
     </div>
     <div
       @click="$store.dispatch('nav/toggleSidebar')"
