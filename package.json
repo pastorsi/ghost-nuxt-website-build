@@ -1,7 +1,7 @@
 {
-  "name": "gather-severnside",
-  "version": "1.0.1",
-  "description": "My superb Nuxt.js project",
+  "name": "mid-cotswolds-evangelical-alliance",
+  "version": "1.0.3",
+  "description": "Communications hub for local networking",
   "author": "Simon Measures",
   "private": true,
   "scripts": {
