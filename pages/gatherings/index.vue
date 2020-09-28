@@ -4,10 +4,10 @@
       <div class="column"></div>
       <div class="column is-two-thirds">
         <h1 class="title has-text-info">
-          Our Gatherings
+          Our Meetings
         </h1>
         <p class="subtitle is-5">
-          This is a list of our upcoming gatherings in the current year.
+          This is a list of our upcoming meetings in the current year.
         </p>
         <div class="container">
           <div class="columns is-multiline">

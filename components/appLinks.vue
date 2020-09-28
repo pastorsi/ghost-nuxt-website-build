@@ -24,7 +24,7 @@
         <span class="icon is-small has-text-warning">
           <font-awesome-icon :icon="['fab', 'meetup']" style="font-size: 1em" />
         </span>
-        Gatherings
+        Meet Up
       </nuxt-link>
     </li>
     <li class="nav-item">

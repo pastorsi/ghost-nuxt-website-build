@@ -8,7 +8,7 @@
         </h1>
         <p class="subtitle is-5">
           The ministries in the list below all send representatives to our
-          gatherings.
+          bi-monthly meetings gatherings.
         </p>
         <div class="container">
           <div class="columns is-multiline">
