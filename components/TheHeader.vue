@@ -1,7 +1,11 @@
 <template>
   <header>
     <div class="brand-name">
-      <nuxt-link to="/">Mid Cotswolds Evangelical Alliance</nuxt-link>
+      <nuxt-link to="/"
+        ><figure class="image is-48x48">
+          <img src="@/assets/logo.png" />
+        </figure>
+      </nuxt-link>
     </div>
     <div
       @click="$store.dispatch('nav/toggleSidebar')"

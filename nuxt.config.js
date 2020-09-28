@@ -1,7 +1,6 @@
 require('dotenv').config()
 
 export default {
-  mode: 'universal',
   /*
    ** Headers of the page
    */
@@ -46,7 +45,6 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
     'nuxt-rfg-icon',
-    '@nuxtjs/manifest',
     [
       'nuxt-fontawesome',
       {
