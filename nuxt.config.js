@@ -63,8 +63,25 @@ export default {
           }
         ]
       }
-    ]
+    ],
+    '@nuxtjs/sitemap'
   ],
+  /*
+   ** sitemap configuration
+   */
+  sitemap: {
+    hostname: 'https://www.mcea.org.uk/',
+    gzip: true,
+    exclude: [
+      '/admin/**',
+      '/admin'
+    ],
+    defaults: {
+      changefreq: 'daily',
+      priority: 1,
+      lastmod: new Date()
+    }
+  },
   /*
    ** Build configuration
    */
