@@ -20,6 +20,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "@nuxtjs/bulma": "^1.2.1",
+    "@nuxtjs/content": "^0.3.0",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "@nuxtjs/sitemap": "^2.4.0",
