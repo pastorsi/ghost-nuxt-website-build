@@ -1,3 +1,5 @@
+import getRoutes from './utils/getRoutes'
+
 require('dotenv').config()
 
 export default {
@@ -64,6 +66,7 @@ export default {
         ]
       }
     ],
+    '@nuxtjs/content',
     '@nuxtjs/sitemap'
   ],
   /*
@@ -77,6 +80,9 @@ export default {
       changefreq: 'daily',
       priority: 1,
       lastmod: new Date()
+    },
+    routes() {
+      return getRoutes()
     }
   },
   /*
