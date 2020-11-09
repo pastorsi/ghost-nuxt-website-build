@@ -75,7 +75,10 @@ export default {
   sitemap: {
     hostname: 'https://www.mcea.org.uk/',
     gzip: true,
-    exclude: ['/admin/**', '/admin'],
+    exclude: [
+      '/admin/**',
+      '/admin'
+    ],
     defaults: {
       changefreq: 'daily',
       priority: 1,
