@@ -43,4 +43,7 @@ body {
   align-items: center;
   justify-items: center;
 }
+.title {
+  word-break: normal !important;
+}
 </style>
