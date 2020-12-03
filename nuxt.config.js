@@ -77,9 +77,6 @@ export default {
       changefreq: 'daily',
       priority: 1,
       lastmod: new Date()
-    },
-    routes() {
-      return getRoutes()
     }
   },
   /*
