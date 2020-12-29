@@ -68,6 +68,17 @@
         News
       </nuxt-link>
     </li>
+    <li class="nav-item">
+      <nuxt-link to="/contact">
+        <span class="icon is-small has-text-warning">
+          <font-awesome-icon
+            :icon="['far', 'envelope']"
+            style="font-size: 1em"
+          />
+        </span>
+        Contact
+      </nuxt-link>
+    </li>
   </ul>
 </template>
 
