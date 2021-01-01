@@ -9,8 +9,7 @@
             Contact Us
           </h1>
           <p class="subtitle is-5">
-            Once you've submitted your message the MCEA secretary will aim to
-            get back you within 72 hours.
+            Sorry this form is not yet working.
           </p>
           <form @submit.prevent="sendEmail">
             <div class="field">
