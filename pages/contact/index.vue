@@ -1,52 +1,63 @@
 /* eslint-disable no-console */
 <template>
   <section class="section">
-    <h1 class="title has-text-info">
-      Contact Us
-    </h1>
-    <p class="subtitle is-5">
-      Your enquiries are welcome. The MCEA secretary will look to get back to
-      you within 72 hours.
-    </p>
-    <form @submit.prevent="sendEmail">
-      <div class="field">
-        <label class="label">Name</label>
-        <div class="control">
-          <input
-            class="input"
-            type="text"
-            name="name"
-            placeholder="Your name"
-          />
+    <div class="content">
+      <div class="columns">
+        <div class="column"></div>
+        <div class="column is-two-thirds">
+          <h1 class="title has-text-info">
+            Contact Us
+          </h1>
+          <p class="subtitle is-5">
+            Once you've submitted your message the MCEA secretary will aim to
+            get back you within 72 hours.
+          </p>
+          <form @submit.prevent="sendEmail">
+            <div class="field">
+              <label class="label">Name</label>
+              <div class="control">
+                <input
+                  class="input"
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                />
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Email</label>
+              <div class="control">
+                <input
+                  class="input"
+                  type="email"
+                  name="email"
+                  placeholder="e.g. alexsmith@gmail.com"
+                />
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Message</label>
+              <div class="control">
+                <textarea
+                  class="textarea"
+                  name="message"
+                  placeholder="Your message"
+                ></textarea>
+              </div>
+            </div>
+            <div class="control">
+              <recaptcha />
+            </div>
+            <div class="control">
+              <button class="button is-primary" type="submit">
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
+        <div class="column"></div>
       </div>
-      <div class="field">
-        <label class="label">Email</label>
-        <div class="control">
-          <input
-            class="input"
-            type="email"
-            name="email"
-            placeholder="e.g. alexsmith@gmail.com"
-          />
-        </div>
-      </div>
-      <div class="field">
-        <label class="label">Message</label>
-        <div class="control">
-          <textarea
-            class="textarea"
-            name="message"
-            placeholder="Your message"
-          ></textarea>
-        </div>
-      </div>
-      <div class="control">
-        <button class="button is-primary" type="submit">
-          Submit
-        </button>
-      </div>
-    </form>
+    </div>
   </section>
 </template>
 <script>
