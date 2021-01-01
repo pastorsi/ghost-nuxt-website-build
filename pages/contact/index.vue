@@ -83,7 +83,7 @@ export default {
           {
             name: this.name,
             email: this.email,
-            message: this.meessage
+            message: this.message
           }
         )
         // eslint-disable-next-line no-console
