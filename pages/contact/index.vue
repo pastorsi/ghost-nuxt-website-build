@@ -9,7 +9,8 @@
             Contact Us
           </h1>
           <p class="subtitle is-5">
-            Sorry this form is not yet working.
+            Sorry this form is not yet working. Sorry this form is not yet
+            working.
           </p>
           <form @submit.prevent="sendEmail">
             <div class="field">
@@ -20,6 +21,8 @@
                   type="text"
                   name="name"
                   placeholder="Your name"
+                  required="required"
+                  pattern="^[a-zA-Z ]+$"
                 />
               </div>
             </div>
@@ -31,6 +34,7 @@
                   type="email"
                   name="email"
                   placeholder="e.g. alexsmith@gmail.com"
+                  required="required"
                 />
               </div>
             </div>
@@ -39,8 +43,11 @@
               <div class="control">
                 <textarea
                   class="textarea"
+                  type="text"
                   name="message"
-                  placeholder="Your message"
+                  placeholder="Please write your message here"
+                  required="required"
+                  minlength="5"
                 ></textarea>
               </div>
             </div>
@@ -48,9 +55,7 @@
               <recaptcha />
             </div>
             <div class="control">
-              <button class="button is-primary" type="submit">
-                Submit
-              </button>
+              <input class="button is-primary" type="submit" value="Send" />
             </div>
           </form>
         </div>
@@ -72,29 +77,24 @@ export default {
     }
   },
   methods: {
-    sendEmail(e) {
-      try {
-        emailjs.sendForm(
-          'Service_bt8lbbb',
+    sendEmail: (e) => {
+      emailjs
+        .sendForm(
+          'service_bt8lbbb',
           'mcea_contact_form',
           e.target,
-          'user_ddB1kBYjUr7bhz87JDRm5',
-          {
-            name: this.name,
-            email: this.email,
-            message: this.message
+          'user_ddB1kBYjUr7bhz87JDRm5'
+        )
+        .then(
+          (result) => {
+            // eslint-disable-next-line no-console
+            console.log('SUCCESS!', result.status, result.text)
+          },
+          (error) => {
+            // eslint-disable-next-line no-console
+            console.log('FAILED...', error)
           }
         )
-        // eslint-disable-next-line no-console
-        console.log('it works!!!')
-      } catch (error) {
-        // eslint-disable-next-line no-console
-        console.log({ error })
-      }
-      // Reset form field
-      this.name = ''
-      this.email = ''
-      this.message = ''
     }
   },
   head() {
