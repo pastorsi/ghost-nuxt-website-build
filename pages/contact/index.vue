@@ -9,8 +9,8 @@
             Contact Us
           </h1>
           <p class="subtitle is-5">
-            Sorry this form is not yet working. Sorry this form is not yet
-            working.
+            Sorry this form is not yet working. Shortly you'll be able to
+            contact the MCEA secretary via this form.
           </p>
           <form @submit.prevent="sendEmail">
             <div class="field">
@@ -51,12 +51,9 @@
                 ></textarea>
               </div>
             </div>
-            <div class="control">
-              <recaptcha />
-            </div>
-            <div class="control">
-              <input class="button is-primary" type="submit" value="Send" />
-            </div>
+            <button class="button is-primary" type="submit">
+              Send
+            </button>
           </form>
         </div>
         <div class="column"></div>
@@ -89,10 +86,12 @@ export default {
           (result) => {
             // eslint-disable-next-line no-console
             console.log('SUCCESS!', result.status, result.text)
+            alert('Sent!')
           },
           (error) => {
             // eslint-disable-next-line no-console
             console.log('FAILED...', error)
+            alert('Failed')
           }
         )
     }
