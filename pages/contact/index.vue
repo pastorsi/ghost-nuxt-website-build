@@ -12,7 +12,7 @@
             Sorry this form is not yet working. Shortly you'll be able to
             contact the MCEA secretary via this form.
           </p>
-          <form @submit.prevent="sendEmail">
+          <form ref="form" @submit.prevent="sendEmail" method="post">
             <div class="field">
               <label class="label">Name</label>
               <div class="control">
@@ -74,6 +74,31 @@ export default {
     }
   },
   methods: {
+    onError(error) {
+      // eslint-disable-next-line no-console
+      console.log('Error happened:', error)
+    },
+    async onSubmit() {
+      try {
+        const token = await this.$recaptcha.getResponse()
+        // eslint-disable-next-line no-console
+        console.log('ReCaptcha token:', token)
+        await this.$recaptcha.reset()
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.log('Login error:', error)
+      }
+    },
+    onSuccess(token) {
+      // eslint-disable-next-line no-console
+      console.log('Succeeded:', token)
+      // here you submit the form
+      this.$refs.form.submit()
+    },
+    onExpired() {
+      // eslint-disable-next-line no-console
+      console.log('Expired')
+    },
     sendEmail: (e) => {
       emailjs
         .sendForm(

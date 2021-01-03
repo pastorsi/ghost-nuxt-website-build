@@ -86,7 +86,7 @@ export default {
     // language: String, // Recaptcha language (v2)
     siteKey: process.env.VUE_APP_CAPTCHA_KEY, // Site key for requests
     version: 2,
-    size: 'compact' // Size: 'compact', 'normal', 'invisible' (v2)
+    size: 'invisible' // Size: 'compact', 'normal', 'invisible' (v2)
   },
   /*
    ** Build configuration
