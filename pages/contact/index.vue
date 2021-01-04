@@ -9,8 +9,8 @@
             Contact Us
           </h1>
           <p class="subtitle is-5">
-            Sorry this form is not yet working. Shortly you'll be able to
-            contact the MCEA secretary via this form.
+            Your enquiry is welcome. The MCEA secretary will endeavour to
+            respond within 48 hours.
           </p>
           <form ref="form" @submit.prevent="sendEmail" method="post">
             <div class="field">
