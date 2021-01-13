@@ -97,8 +97,6 @@ export default {
     onSuccess(token) {
       // eslint-disable-next-line no-console
       console.log('Succeeded:', token)
-      // here you submit the form
-      this.$refs.form.submit()
     },
     onExpired() {
       // eslint-disable-next-line no-console
@@ -110,7 +108,7 @@ export default {
           'service_bt8lbbb',
           'mcea_contact_form',
           e.target,
-          'user_ddB1kBYjUr7bhz87JDRm5'
+          process.env.EMAIL_JS_USER
         )
         .then(
           (result) => {
