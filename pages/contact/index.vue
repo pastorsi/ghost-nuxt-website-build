@@ -51,11 +51,6 @@
                 ></textarea>
               </div>
             </div>
-            <recaptcha
-              @error="onError"
-              @success="onSuccess"
-              @expired="onExpired"
-            />
             <button class="button is-primary" type="submit">
               Send
             </button>
@@ -114,12 +109,12 @@ export default {
           (result) => {
             // eslint-disable-next-line no-console
             console.log('SUCCESS!', result.status, result.text)
-            alert('Successfully sent!')
+            alert('Sent!')
           },
           (error) => {
             // eslint-disable-next-line no-console
             console.log('FAILED...', error)
-            alert('Sending failed or rejected')
+            alert('Failed')
           }
         )
     }
