@@ -12,45 +12,55 @@
             Your enquiry is welcome. The MCEA secretary will endeavour to
             respond within 48 hours.
           </p>
-          <form ref="form" @submit.prevent="sendEmail" method="post">
-            <div class="field">
-              <label class="label">Name</label>
-              <div class="control">
-                <input
-                  class="input"
-                  type="text"
-                  name="name"
-                  placeholder="Your name"
-                  required="required"
-                  pattern="^[a-zA-Z ]+$"
-                />
+          <form ref="form" @submit.prevent="onSubmit" method="post">
+            <fieldset>
+              <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                  <input
+                    v-model="name"
+                    class="input"
+                    type="text"
+                    name="name"
+                    placeholder="Your name"
+                    required="required"
+                    pattern="^[a-zA-Z ]+$"
+                  />
+                </div>
               </div>
-            </div>
-            <div class="field">
-              <label class="label">Email</label>
-              <div class="control">
-                <input
-                  class="input"
-                  type="email"
-                  name="email"
-                  placeholder="e.g. alexsmith@gmail.com"
-                  required="required"
-                />
+              <div class="field">
+                <label class="label">Email</label>
+                <div class="control">
+                  <input
+                    v-model="email"
+                    class="input"
+                    type="email"
+                    name="email"
+                    placeholder="e.g. alexsmith@gmail.com"
+                    required="required"
+                  />
+                </div>
               </div>
-            </div>
-            <div class="field">
-              <label class="label">Message</label>
-              <div class="control">
-                <textarea
-                  class="textarea"
-                  type="text"
-                  name="message"
-                  placeholder="Please write your message here"
-                  required="required"
-                  minlength="5"
-                ></textarea>
+              <div class="field">
+                <label class="label">Message (short)</label>
+                <div class="control">
+                  <textarea
+                    v-model="message"
+                    class="textarea"
+                    type="text"
+                    name="message"
+                    placeholder="Please write your message here"
+                    required="required"
+                    minlength="5"
+                  ></textarea>
+                </div>
               </div>
-            </div>
+            </fieldset>
+            <recaptcha
+              @error="onError"
+              @success="onSuccess"
+              @expired="onExpired"
+            />
             <button class="button is-primary" type="submit">
               Send
             </button>
@@ -63,6 +73,7 @@
 </template>
 <script>
 import emailjs from 'emailjs-com'
+const token = ''
 
 export default {
   name: 'ContactUs',
@@ -70,7 +81,8 @@ export default {
     return {
       name: '',
       email: '',
-      message: ''
+      message: '',
+      token
     }
   },
   methods: {
@@ -92,29 +104,47 @@ export default {
     onSuccess(token) {
       // eslint-disable-next-line no-console
       console.log('Succeeded:', token)
+      // here you submit the form
+      this.token = token
+      this.alertNotice()
+      this.name = ''
+      this.email = ''
+      this.message = ''
     },
     onExpired() {
       // eslint-disable-next-line no-console
       console.log('Expired')
     },
     sendEmail: (e) => {
+      const params =
+        'name: ' +
+        this.name +
+        ', ' +
+        'email: ' +
+        this.email +
+        ', ' +
+        'message: ' +
+        this.message +
+        ', ' +
+        'g-recaptcha-response: ' +
+        this.token
       emailjs
         .sendForm(
           'service_bt8lbbb',
           'mcea_contact_form',
-          e.target,
-          process.env.EMAIL_JS_USER
+          params,
+          'user_ddB1kBYjUr7bhz87JDRm5'
         )
         .then(
           (result) => {
             // eslint-disable-next-line no-console
             console.log('SUCCESS!', result.status, result.text)
-            alert('Sent!')
+            alert('Successfully sent!')
           },
           (error) => {
             // eslint-disable-next-line no-console
             console.log('FAILED...', error)
-            alert('Failed')
+            alert('Sending failed or rejected')
           }
         )
     }
