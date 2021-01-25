@@ -12,7 +12,14 @@
             Your enquiry is welcome. The MCEA secretary will endeavour to
             respond within 48 hours.
           </p>
-          <form ref="form" @submit.prevent="onSubmit" method="post">
+          <form
+            ref="form"
+            @submit.prevent="
+              onSubmit()
+              sendEmail()
+            "
+            method="post"
+          >
             <fieldset>
               <div class="field">
                 <label class="label">Name</label>
@@ -106,33 +113,16 @@ export default {
       console.log('Succeeded:', token)
       // here you submit the form
       this.token = token
-      this.alertNotice()
-      this.name = ''
-      this.email = ''
-      this.message = ''
     },
     onExpired() {
       // eslint-disable-next-line no-console
       console.log('Expired')
     },
-    sendEmail: (e) => {
-      const params =
-        'name: ' +
-        this.name +
-        ', ' +
-        'email: ' +
-        this.email +
-        ', ' +
-        'message: ' +
-        this.message +
-        ', ' +
-        'g-recaptcha-response: ' +
-        this.token
+    sendEmail: () => {
       emailjs
         .sendForm(
           'service_bt8lbbb',
           'mcea_contact_form',
-          params,
           'user_ddB1kBYjUr7bhz87JDRm5'
         )
         .then(
@@ -147,6 +137,9 @@ export default {
             alert('Sending failed or rejected')
           }
         )
+      this.name = ''
+      this.email = ''
+      this.message = ''
     }
   },
   head() {
