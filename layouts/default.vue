@@ -44,6 +44,6 @@ body {
   justify-items: center;
 }
 .title {
-  word-break: normal !important;
+  word-break: normal;
 }
 </style>
