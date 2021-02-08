@@ -17,6 +17,7 @@
               <label class="label">Name</label>
               <div class="control">
                 <input
+                  v-model="name"
                   class="input"
                   type="text"
                   name="name"
@@ -30,6 +31,7 @@
               <label class="label">Email</label>
               <div class="control">
                 <input
+                  v-model="email"
                   class="input"
                   type="email"
                   name="email"
@@ -42,6 +44,7 @@
               <label class="label">Message</label>
               <div class="control">
                 <textarea
+                  v-model="message"
                   class="textarea"
                   type="text"
                   name="message"
@@ -117,6 +120,7 @@ export default {
             // eslint-disable-next-line no-console
             console.log('SUCCESS!', result.status, result.text)
             alert('Successfully sent!')
+            e.target.reset()
           },
           (error) => {
             // eslint-disable-next-line no-console

@@ -45,5 +45,6 @@ body {
 }
 .title {
   word-break: normal;
+  hyphens: auto;
 }
 </style>
