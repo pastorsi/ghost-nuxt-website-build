@@ -10,6 +10,12 @@
         </div>
         <div class="column">
           <p>Developed and built by Simon Measures (2020)</p>
+          <a href="https://ko-fi.com/Z8Z73RHNI" target="_blank"
+            ><img
+              src="https://cdn.ko-fi.com/cdn/kofi2.png?v=2"
+              alt="Buy Me a Coffee at ko-fi.com"
+              class="mybutton"
+          /></a>
         </div>
       </div>
     </div>
@@ -33,6 +39,9 @@ footer {
 }
 .foot-links {
   justify-self: end;
+}
+.mybutton {
+  height: 36px;
 }
 @media (min-width: 768px) {
   .foot-links {
