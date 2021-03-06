@@ -27,7 +27,7 @@
                         </figure>
                       </div>
                       <div class="media-content">
-                        <p class="title is-4">{{ post.title }}</p>
+                        <p class="title is-5" lang="en-GB">{{ post.title }}</p>
                         <!--<p class="subtitle is-6">
                           Author: {{ post.authors[0].name }}
                         </p>-->

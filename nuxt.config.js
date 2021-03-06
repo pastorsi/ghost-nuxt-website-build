@@ -35,8 +35,17 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
-    '@/modules/generator'
+    '@/modules/generator',
+    '@nuxtjs/google-analytics'
   ],
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID
+  },
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID
+    }
+  },
   /*
    ** Nuxt.js modules
    */
