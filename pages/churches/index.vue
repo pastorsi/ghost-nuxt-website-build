@@ -56,6 +56,13 @@ export default {
   async asyncData() {
     const tag = 'church'
     const posts = await getPosts(tag)
+    let i, j, k
+    for (i = posts.length - 1; i > 0; i--) {
+      j = Math.floor(Math.random() * i)
+      k = posts[i]
+      posts[i] = posts[j]
+      posts[j] = k
+    }
     return { posts }
   },
   head() {
