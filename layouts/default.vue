@@ -4,6 +4,7 @@
     <TheSideNav />
     <div class="app-content">
       <nuxt />
+      <CookieControl :locale="$store.state.lang" />
     </div>
     <TheFooter />
   </div>
