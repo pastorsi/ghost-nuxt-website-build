@@ -75,8 +75,98 @@ export default {
         ]
       }
     ],
+    [
+      'nuxt-cookie-control',
+      {
+        barPosition: 'bottom-right',
+        css: true,
+        controlButton: true,
+        blockIframe: true,
+        colors: {
+          barTextColor: '#fff',
+          barBackground: '#12957b',
+          barButtonColor: '#fff',
+          barButtonBackground: '#206569',
+          barButtonHoverColor: '#fff',
+          barButtonHoverBackground: '#2e495e',
+          modalButtonBackground: '#206569',
+          modalButtonHoverColor: '#fff',
+          controlButtonBackground: '#12957b',
+          controlButtonHoverBackground: '#2e495e',
+          controlButtonIconHoverColor: '#fff',
+          controlButtonIconColor: '#fff',
+          modalButtonHoverBackground: '#2e495e',
+          checkboxActiveBackground: '#2e495e',
+          checkboxInactiveBackground: '#ede1e1',
+          checkboxActiveCircleBackground: '#00c58e',
+          checkboxInactiveCircleBackground: '#f44336',
+          checkboxDisabledBackground: '#ddd',
+          checkboxDisabledCircleBackground: '#fff'
+        },
+        // default texts
+        text: {
+          barTitle: 'Cookies',
+          barDescription:
+            'We use third-party cookies so that we can better understand how the site is used. This can help us improve the services we offer. Please select below your preference.',
+          acceptAll: 'Accept all',
+          declineAll: 'Delete all',
+          manageCookies: 'Manage cookies',
+          unsaved: 'You have unsaved settings',
+          close: 'Close',
+          save: 'Save',
+          necessary: 'Necessary cookies',
+          optional: 'Optional cookies',
+          functional: 'Functional cookies',
+          blockedIframe: 'To see this, please enable functional cookies',
+          here: 'here'
+        }
+      }
+    ],
     '@nuxtjs/sitemap'
   ],
+  cookie: {
+    necessary: [
+      {
+        name: {
+          en: 'Default cookies',
+          hr: 'Osnovni kolačići'
+        },
+
+        description: {
+          en: 'Used for cookie control.'
+        },
+        cookies: ['cookie_control_consent', 'cookie_control_enabled_cookies']
+      }
+    ],
+    optional: [
+      {
+        name: {
+          en: 'Google Analytics',
+          de: 'Google Analytics',
+          es: 'Google Analytics',
+          fr: 'Google Analytics',
+          hr: 'Google Analitika',
+          it: 'Google Analytics'
+        },
+        description: {
+          en:
+            'Google Analytics is a web analytics service offered by Google that tracks and reports website traffic.'
+        },
+        src: 'https://www.googletagmanager.com/gtag/js?id=UA-48966313-4',
+        async: true,
+        cookies: ['_ga', '_gat_gtag_UA-48966313-4', '_gid'],
+        accepted: () => {
+          window.dataLayer = window.dataLayer || []
+          function gtag() {
+            // eslint-disable-next-line no-undef
+            dataLayer.push(arguments)
+          }
+          gtag('js', new Date())
+          gtag('config', 'UA-48966313-4')
+        }
+      }
+    ]
+  },
   /*
    ** sitemap configuration
    */

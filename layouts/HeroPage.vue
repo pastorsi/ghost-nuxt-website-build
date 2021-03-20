@@ -3,6 +3,7 @@
     <TheHeader />
     <TheSideNav />
     <nuxt />
+    <CookieControl :locale="$store.state.lang" />
     <TheFooter />
   </div>
 </template>
