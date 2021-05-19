@@ -6,6 +6,7 @@ export default {
    */
   head: {
     title: process.env.npm_package_name || '',
+    script: [{ src: 'https://www.google.com/recaptcha/api.js', async: true }],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -54,7 +55,6 @@ export default {
     '@nuxtjs/bulma',
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
-    '@nuxtjs/recaptcha',
     'nuxt-rfg-icon',
     [
       'nuxt-fontawesome',
@@ -89,13 +89,6 @@ export default {
       priority: 1,
       lastmod: new Date()
     }
-  },
-  recaptcha: {
-    hideBadge: false, // Hide badge element (v3 & v2 via size=invisible)
-    // language: String, // Recaptcha language (v2)
-    siteKey: process.env.VUE_APP_CAPTCHA_KEY, // Site key for requests
-    version: 2,
-    size: 'invisible' // Size: 'compact', 'normal', 'invisible' (v2)
   },
   /*
    ** Build configuration
