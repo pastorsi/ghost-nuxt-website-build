@@ -9,10 +9,15 @@
             Contact Us
           </h1>
           <p class="subtitle is-5">
-            Your enquiry is welcome. The MCEA secretary will endeavour to
-            respond within 48 hours.
+            Your enquiry is welcome.<br /><br />Important: If "I'm not a robot"
+            isn't visible in the form, refresh this page!
           </p>
-          <form ref="form" @submit.prevent="sendEmail" method="post">
+          <form
+            id="contact_form"
+            ref="form"
+            @submit.prevent="sendEmail"
+            method="post"
+          >
             <div class="field">
               <label class="label">Name</label>
               <div class="control">
@@ -62,7 +67,7 @@
               />
             </div>
             <div :data-sitekey="site_key" class="g-recaptcha"></div>
-            <button class="button is-primary g-recaptcha" type="submit">
+            <button class="button is-primary" type="submit">
               Send
             </button>
           </form>
@@ -75,7 +80,6 @@
 <script>
 import emailjs from 'emailjs-com'
 const token = ''
-
 export default {
   name: 'ContactUs',
   data() {
