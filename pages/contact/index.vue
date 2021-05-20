@@ -9,10 +9,15 @@
             Contact Us
           </h1>
           <p class="subtitle is-5">
-            Your enquiry is welcome. The MCEA secretary will endeavour to
-            respond within 48 hours.
+            Your enquiry is welcome.<br /><br />Important: If "I'm not a robot"
+            isn't visible in the form, refresh this page!
           </p>
-          <form ref="form" @submit.prevent="sendEmail" method="post">
+          <form
+            id="contact_form"
+            ref="form"
+            @submit.prevent="sendEmail"
+            method="post"
+          >
             <div class="field">
               <label class="label">Name</label>
               <div class="control">
@@ -54,11 +59,14 @@
                 ></textarea>
               </div>
             </div>
-            <recaptcha
-              @error="onError"
-              @success="onSuccess"
-              @expired="onExpired"
-            />
+            <div class="field">
+              <input
+                type="hidden"
+                name="derive_fields"
+                value="imgverify=g-recaptcha-response"
+              />
+            </div>
+            <div :data-sitekey="site_key" class="g-recaptcha"></div>
             <button class="button is-primary" type="submit">
               Send
             </button>
@@ -72,11 +80,11 @@
 <script>
 import emailjs from 'emailjs-com'
 const token = ''
-
 export default {
   name: 'ContactUs',
   data() {
     return {
+      site_key: process.env.VUE_APP_CAPTCHA_SITE_KEY,
       name: '',
       email: '',
       message: '',
@@ -84,31 +92,6 @@ export default {
     }
   },
   methods: {
-    onError(error) {
-      // eslint-disable-next-line no-console
-      console.log('Error happened:', error)
-    },
-    async onSubmit() {
-      try {
-        const token = await this.$recaptcha.getResponse()
-        // eslint-disable-next-line no-console
-        console.log('ReCaptcha token:', token)
-        await this.$recaptcha.reset()
-      } catch (error) {
-        // eslint-disable-next-line no-console
-        console.log('Login error:', error)
-      }
-    },
-    onSuccess(token) {
-      // eslint-disable-next-line no-console
-      console.log('Succeeded:', token)
-      // here you submit the form
-      this.token = token
-    },
-    onExpired() {
-      // eslint-disable-next-line no-console
-      console.log('Expired')
-    },
     sendEmail: (e) => {
       emailjs
         .sendForm(
@@ -130,9 +113,6 @@ export default {
             alert('Sending failed or rejected')
           }
         )
-      this.name = ''
-      this.email = ''
-      this.message = ''
     }
   },
   head() {
