@@ -9,8 +9,9 @@
             Contact Us
           </h1>
           <p class="subtitle is-5">
-            Your enquiry is welcome.<br /><br />Important: If "I'm not a robot"
-            isn't visible in the form, refresh this page!
+            Your enquiry is welcome.<br /><br />First, refresh this page so the
+            security check appears! (Hint: for smartphone swipe down, for laptop
+            click browser's refresh or reload icon.)
           </p>
           <form
             id="contact_form"
