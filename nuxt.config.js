@@ -6,7 +6,15 @@ export default {
    */
   head: {
     title: process.env.npm_package_name || '',
-    script: [{ src: 'https://www.google.com/recaptcha/api.js', async: true }],
+    script: [
+      { src: 'https://www.google.com/recaptcha/api.js', async: true },
+      {
+        src:
+          'https://cdn-cookieyes.com/client_data/1dd336d8c127db781bfbfe32.js',
+        async: true,
+        id: 'cookieyes'
+      }
+    ],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
