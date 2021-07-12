@@ -85,6 +85,21 @@ export default {
     ],
     '@nuxtjs/sitemap'
   ],
+  manifest: {
+    icon: {
+      // Add path to the app icon
+      iconSrc: ''
+    },
+    // Short name of your app
+    short_name: 'MCEA',
+    // Name of your app
+    name: 'MCEA',
+    // Add description
+    description: 'Mid Cotswold EA networking website',
+    start_url: '/',
+    theme_color: '#0097A7',
+    background_color: '#FFF'
+  },
   /*
    ** sitemap configuration
    */
